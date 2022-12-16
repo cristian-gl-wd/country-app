@@ -1,1 +1,50 @@
-<p>country works!</p>
+<!-- <h3>By country:</h3>
+<hr> -->
+<form class="d-flex" autocomplete="off" (ngSubmit)="search()">
+    <div class="col">
+        <div class="mb-3">
+            <label for="" class="form-label">Search by country:</label>
+            <input type="text" name="query" class="form-control" placeholder="Write a country name..." aria-describedby="helpId" [(ngModel)]="query">
+            <hr>
+            <small id="helpId" class="text-muted" *ngIf="query.length > 0">"{{ query }}"</small>
+        </div>
+    </div>
+</form>
+<!-- private apiUrl: string = 'https://restcountries.com/v2'; -->
+
+<div class="alert alert-danger alert-dismissible fade show" *ngIf="hasError" role="alert">
+  <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+  <strong>Error</strong>
+  <p>Sorry, we couldn't found any country which coincide with <strong>"{{ query }}"</strong></p>
+</div>
+
+<div class="table-responsive" *ngIf="!hasError">
+    <table class="table">
+        <thead>
+            <tr>
+                <th scope="col">#</th>
+                <th scope="col">Flag</th>
+                <th scope="col">Name</th>
+                <th scope="col">Population</th>
+                <th scope="col"></th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr class="">
+                <td scope="row">R1C1</td>
+                <td>R1C2</td>
+                <td>R1C3</td>
+                <td>R1C4</td>
+                <td>R1C5</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+
+<!-- <script>
+  var alertList = document.querySelectorAll('.alert');
+  alertList.forEach(function (alert) {
+    new bootstrap.Alert(alert)
+  })
+</script> -->
