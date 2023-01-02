@@ -1,0 +1,16 @@
+table tr > td.flag {
+    max-width: 2vw;
+}
+
+table tr > td > img.small-img {
+    max-width: 2vw;
+    padding: .15rem;
+    background: LightGray;
+    border-radius: 25%;
+    transition: border-radius .1s ease, background .1s ease;
+}
+
+table tr:hover > td > img.small-img {
+    background: inherit;
+    border-radius: 10%;
+}
