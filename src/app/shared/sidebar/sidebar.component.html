@@ -1,19 +1,19 @@
-<h2>Search by:</h2>
-<ul class="list-group">
-    <li routerLink=""
+<nav class="nav nav-masthead justify-content-center">  <!-- float-md-end -->
+    <a routerLink=""
     routerLinkActive="active"
     [routerLinkActiveOptions]="{ exact: true }"
-    class="list-group-item">
+    class="nav-link"
+    aria-current="page">
         Country
-    </li>
-    <li  routerLink="region"
+    </a>
+    <a  routerLink="region"
     routerLinkActive="active"
-        class="list-group-item">
+        class="nav-link">
         Region
-    </li>
-    <li routerLink="capital"
-    routerLinkActive="active"
-        class="list-group-item">
+    </a>
+    <a routerLink="capital"
+        routerLinkActive="active"
+        class="nav-link">
         Capital
-    </li>
-</ul>
+    </a>
+</nav>
