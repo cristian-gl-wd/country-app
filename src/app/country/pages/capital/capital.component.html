@@ -1,4 +1,3 @@
-<label for="query" class="form-label">Capital</label>
 <app-country-form class="col-12" (onEnterPress)="search($event)" (onDebounce)="suggestions(query)" placeholder="Write a capital name..."></app-country-form>
 
 <div class="alert alert-danger alert-dismissible fade show" *ngIf="hasError" role="alert">
