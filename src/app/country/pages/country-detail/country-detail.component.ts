@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { switchMap, tap } from 'rxjs/operators';
-import { Country, NativeName } from '../../interfaces/country.interface';
+import { Country, Aed } from '../../interfaces/country.interface';
 import { CountryService } from '../../services/country.service';
 
 @Component({
@@ -12,7 +12,7 @@ import { CountryService } from '../../services/country.service';
 export class CountryDetailComponent {
   
   country!: Country;
-  nativeNames: any;
+  currencies: any[] = [];
 
   constructor(
     private activatedRoute: ActivatedRoute,

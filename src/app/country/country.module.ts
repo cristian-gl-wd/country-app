@@ -11,7 +11,6 @@ import { CountryComponent } from './pages/country/country.component';
 import { RegionComponent } from './pages/region/region.component';
 
 
-
 @NgModule({
   declarations: [
     CapitalComponent,
