@@ -9,7 +9,7 @@ import { CapitalComponent } from './pages/capital/capital.component';
 import { CountryDetailComponent } from './pages/country-detail/country-detail.component';
 import { CountryComponent } from './pages/country/country.component';
 import { RegionComponent } from './pages/region/region.component';
-
+import { CountryListComponent } from './components/country-list/country-list.component';
 
 
 @NgModule({
@@ -19,7 +19,8 @@ import { RegionComponent } from './pages/region/region.component';
     RegionComponent,
     CountryDetailComponent,
     CountryTableComponent,
-    CountryFormComponent
+    CountryFormComponent,
+    CountryListComponent
   ],
   imports: [
     CommonModule,

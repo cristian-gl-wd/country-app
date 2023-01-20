@@ -1,0 +1,50 @@
+#searcher {
+    position: relative;
+    /* height: 40px; */
+}
+
+#searcher > i.bi.bi-search {
+    position: absolute;
+    left: 12px;
+    top: 6px;
+    color: rgb(58, 58, 58);
+}
+
+#searcher > form > input {
+    border: none;
+    border-radius: 25px;
+    padding-left: 35px;
+    padding-right: 225px;
+    box-shadow: none;
+}
+
+#searcher > form > input::-webkit-search-cancel-button {
+    display: none;
+}
+
+/* OPTIONS */
+#searcher > .searcher-options {
+    position: absolute;
+    right: 16px;
+    top: 0;
+}
+
+.nav-masthead .nav-link {
+    padding: .25rem 0;
+    font-weight: 700;
+    color: rgba(128, 128, 128, .5);
+    cursor: pointer;
+}
+
+.nav-masthead .nav-link:hover {
+    color: #79a7cd;
+}
+
+.nav-masthead .nav-link + .nav-link {
+    margin-left: 1rem;
+}
+
+.nav-masthead .active,
+.nav-masthead .active:hover {
+    color: #578fc3;
+}
