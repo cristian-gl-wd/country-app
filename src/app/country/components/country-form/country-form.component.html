@@ -3,7 +3,7 @@
         <div class="mb-3">
             <input type="text" name="query" class="form-control" [placeholder]="placeholder" aria-describedby="helpId" [(ngModel)]="query" (input)="keyPressed()">
             <hr *ngIf="lastQuery.length>0">
-            <small id="helpId" class="text-muted" *ngIf="lastQuery.length > 0">"{{ lastQuery }}"</small>
+            <small *ngIf="lastQuery.length > 0">"{{ lastQuery }}"</small>
         </div>
     </div>
 </form>
