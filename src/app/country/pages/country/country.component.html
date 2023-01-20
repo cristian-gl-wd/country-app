@@ -6,4 +6,5 @@
   <p>Sorry, we couldn't found any country which coincide with <strong>"{{ query }}"</strong></p>
 </div>
 
-<app-country-table *ngIf="countries.length>0" [countries]="countries"></app-country-table>
+<!-- <app-country-table *ngIf="countries.length>0" [countries]="countries"></app-country-table> -->
+<app-country-list *ngIf="countries.length>0" [countries]="countries"></app-country-list>

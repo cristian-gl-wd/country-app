@@ -1,0 +1,66 @@
+.card {
+    border: none;
+    background-color: transparent;
+    border-radius: 0;
+    border-bottom: 1px rgba(255, 255, 255, .25) solid;
+}
+
+.card:last-child {
+    border: none;
+}
+
+.card > a {
+    color: white;
+    cursor: pointer;
+    text-decoration: none;
+    transition: all .5s ease;
+}
+
+.card > a:hover {
+    color: black;
+    background-color: rgba(255, 255, 255, .9);
+    box-shadow: 0px 0px 8px 2px rgba(255,255,255,.5);
+}
+
+
+.card .card-body .card-title {
+    color: #79a7cd;
+    transition: color .5s ease;
+}
+
+.card .card-body .card-title span {
+    color: white;
+    transition: color .5s ease;
+}
+
+.card > a:hover .card-body .card-title span {
+    color: rgb(58, 58, 58);
+}
+
+.card > a:hover .card-body .card-title {
+    color: #308bcc;
+}
+
+
+/* FLAGS */
+.card .flag {
+    height: 100%;
+}
+
+/* COAT OF ARMS */
+.card .card-body {
+    position: relative;
+    overflow: hidden;
+}
+
+.card .card-body .coatOfArms {
+    position: absolute;
+    top: 5%;
+    right: -10vw;
+    height: 90%;
+    transition: margin-right .5s ease;
+}
+
+.card > a:hover .card-body .coatOfArms {
+    margin-right: 11vw;
+}
