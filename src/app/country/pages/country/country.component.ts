@@ -21,7 +21,10 @@ export class CountryComponent {
 
     this.CountryService.searchCountry(this.query)
       .subscribe({
-        next: (countries) => this.countries = countries,
+        next: (countries) => {
+          this.countries = countries;
+          console.log(this.countries);
+        },
         error: (e) => {
           this.hasError = true;
           this.countries = [];
