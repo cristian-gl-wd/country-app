@@ -3,6 +3,6 @@ h2 > a {
     color: #79a7cd;
 }
 
-h2 > a > i {
-    color: white;
+h2 > a > img {
+    max-height: 43px;
 }
