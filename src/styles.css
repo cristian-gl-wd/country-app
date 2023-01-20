@@ -3,8 +3,30 @@
 /*
  * Base structure
  */
- 
+
+@font-face {
+    font-family: abeezee-italic;
+    src: url(assets/fonts/ABeeZee-Italic.ttf) format("opentype");
+}
+
+@font-face {
+    font-family: abeezee-regular;
+    src: url(assets/fonts/ABeeZee-Regular.ttf) format("opentype");
+}
+
+@font-face {
+    font-family: bokor;
+    src: url(assets/fonts/Bokor-Regular.ttf) format("opentype");
+}
+
+@font-face {
+    font-family: leah;
+    src: url(assets/fonts/fleurDeLeah-Regular.ttf) format("opentype");
+}
+
+
 body {
+    font-family: abeezee-regular;
     background-color: rgb(58, 58, 58);
     color: white;
     text-shadow: 0 .05rem .1rem rgba(0, 0, 0, .5);
