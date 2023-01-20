@@ -1,4 +1,8 @@
 h2 > a {
     text-decoration: none;
+    color: #79a7cd;
+}
+
+h2 > a > i {
     color: white;
 }
