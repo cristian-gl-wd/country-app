@@ -1,4 +1,9 @@
 main {
-    max-height: 85vh;
-    overflow-y: auto;
+    /* max-height: 85vh; */
+    /* overflow-y: auto; */
+}
+
+#web-content {
+    box-shadow: inset 0px 0px 15vw 0px rgba(0,0,0,0.75);
+    min-height: 100vh;
 }
