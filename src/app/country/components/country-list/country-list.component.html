@@ -6,7 +6,7 @@
             </div>
             <div class="col-10">
                 <div class="card-body">
-                    <h5 class="card-title">{{ country.name.common }}<span>, {{ country.capital }}</span></h5>
+                    <h5 class="card-title">{{ country.name.common }}<span *ngIf="country.capital?.length">, {{ country.capital }}</span></h5>
                     <p class="card-text">{{ country.name.official }}</p>
                     <p class="card-text"><small>{{ country.population | number }} population</small></p>
                     <img *ngIf="country.coatOfArms.svg" [src]="country.coatOfArms.png" class="img-fluid coatOfArms " alt="Coat of arms">
