@@ -1,16 +1,37 @@
-table tr > td.flag {
-    max-width: 2vw;
+/*
+ * Table styles
+ */
+
+table {
+    border-color: white;
+    color: white;
 }
 
-table tr > td > img.small-img {
-    max-width: 2vw;
-    padding: .15rem;
-    background: LightGray;
-    border-radius: 25%;
-    transition: border-radius .1s ease, background .1s ease;
+table > tbody > tr:hover {
+    background-color: grey;
 }
 
-table tr:hover > td > img.small-img {
-    background: inherit;
-    border-radius: 10%;
+/* FLAGS */
+table > tbody > tr > td > img.small-img {
+    max-width: 2vw;
+    border: 2px solid black;
+    border-radius: 8%;
+    transition: all .1s ease;
+    max-height: 26px;
+}
+
+/* LINKS */
+table > tbody > tr > td.link-button > a {
+    background-color: #79a7cd;
+    color: white;
+    padding: 4px;
+    border-radius: 5px;
+    border: 1px solid #578fc3;
+    text-decoration: none;
+    transition: all .25s ease;
+}
+
+table > tbody > tr > td.link-button > a:hover {
+    background-color: #578fc3;
+    color: white;
 }

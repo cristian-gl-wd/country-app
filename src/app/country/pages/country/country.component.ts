@@ -9,19 +9,25 @@ import { CountryService } from '../../services/country.service';
 })
 export class CountryComponent {
 
-  query       : string = '';
-  hasError    : boolean = false;
-  countries   : Country[] = [];
+  query                 : string = '';
+  hasError              : boolean = false;
+  countries             : Country[] = [];
+  suggestionsCountries  : Country[] = [];
+  showSuggestions       : boolean = false;
 
   constructor(private CountryService: CountryService) {}
 
   public search(query: string) {
     this.query = query;
     this.hasError = false;
+    this.showSuggestions = false;
 
     this.CountryService.searchCountry(this.query)
       .subscribe({
-        next: (countries) => this.countries = countries,
+        next: (countries) => {
+          this.countries = countries;
+          console.log(this.countries);
+        },
         error: (e) => {
           this.hasError = true;
           this.countries = [];
@@ -31,6 +37,16 @@ export class CountryComponent {
 
   public suggestions(query: string) {
     this.hasError = false;
-    //TODO[C]: Crear sugerencias
+    this.query = query;
+    
+    this.CountryService.searchCountry(query)
+    .subscribe(countries => {
+      this.suggestionsCountries = countries.splice(0,5)
+      this.showSuggestions = true;
+    });
+  }
+
+  public searchQueryBySuggestionOption(query: string): void {
+    this.search(query);
   }
 }

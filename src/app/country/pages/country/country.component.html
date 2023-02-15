@@ -1,4 +1,15 @@
-<app-country-form class="col-12" (onEnterPress)="search($event)" (onDebounce)="suggestions(query)" placeholder="Write a country name..."></app-country-form>
+<app-country-form class="col-12" (onEnterPress)="search($event)" (onDebounce)="suggestions($event)" placeholder="Write a country name..."></app-country-form>
+<ul *ngIf="showSuggestions"
+ class="list-group">
+  <li *ngFor="let suggestCountry of suggestionsCountries"
+    class="list-group-item list-group-item-action">
+    <a class="nav-link" [routerLink]="[ '/country', suggestCountry.cca3 | lowercase ]">{{ suggestCountry.name.common }}</a>
+  </li>
+  <li class="list-group-item list-group-item-action"
+    (click)="searchQueryBySuggestionOption(query)">
+    <a class="nav-link"><i>Search "{{ query }}"</i></a>
+  </li>
+</ul>
 
 <div class="alert alert-danger alert-dismissible fade show" *ngIf="hasError" role="alert">
   <!-- <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button> -->
@@ -6,4 +17,4 @@
   <p>Sorry, we couldn't found any country which coincide with <strong>"{{ query }}"</strong></p>
 </div>
 
-<app-country-table *ngIf="countries.length>0" [countries]="countries"></app-country-table>
+<app-country-list *ngIf="countries.length>0" [countries]="countries"></app-country-list>

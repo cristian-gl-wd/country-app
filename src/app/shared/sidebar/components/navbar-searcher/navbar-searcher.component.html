@@ -1,18 +1,19 @@
-<form class="d-flex" autocomplete="off" >
-    <!-- <input type="text" name="query" class="form-control" aria-describedby="helpId" [(ngModel)]="query" (input)="keyPressed()"> -->
-    <input type="text" name="querySearch" class="form-control">
-    <!-- <hr *ngIf="lastQuery.length>0">
-    <small id="helpId" class="text-muted" *ngIf="lastQuery.length > 0">"{{ lastQuery }}"</small> 
-
-
-
-form
-(ngSubmit)="search()"
-
-
-input
-[placeholder]="placeholder"
-
-
--->
-</form>
+<div *ngIf="false" id="searcher"> //TODO: finish searcher to replace the actual searcher
+    <i class="bi bi-search"></i>
+    <form autocomplete="off">
+        <input type="search" class="form-control" placeholder="Search something...">
+    </form>
+    <div class="searcher-options">
+        <nav class="nav nav-masthead">
+            <a class="nav-link">
+                Country
+            </a>
+            <a class="nav-link active">
+                Region
+            </a>
+            <a class="nav-link">
+                Capital
+            </a>
+        </nav>
+    </div>
+</div>

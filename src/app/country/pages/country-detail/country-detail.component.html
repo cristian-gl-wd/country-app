@@ -9,37 +9,56 @@
             <div class="row">
                 <div class="col-10">
                     <h1 class="mb-0">{{ country.name.official }}</h1>
-                    <h3><small class="text-muted">{{ country.region }}, {{ country.subregion }}</small></h3>
-                    
+                    <h3><small>{{ country.region }}, {{ country.subregion }}</small></h3>
                 </div>
-                <picture class="col-2 mb-0 text-center">
+                <figure class="figure col-2 mb-0">
                     <img [src]="country.flags.png" class="img-fluid flag" alt="Flag">
-                    <small class="text-muted"><i class="bi bi-geo-alt-fill"></i>{{ country.latlng }}</small>
-                </picture>
+                    <figcaption class="figure-caption text-center"><i class="bi bi-geo-alt-fill"></i> {{ country.latlng }}</figcaption>
+                </figure>
             </div>
 
+            //TODO: finish country details view
+
             <dl class="row">
-                <dt class="col-sm-3">Native name:</dt>
+                <dt class="col-sm-3">Area:</dt>
                 <dd class="col-sm-9">
-                    <ul>                        
-                        <!-- <li>{{ nativeNames.common }}</li> -->
-                    </ul>
+                    <p>{{ country.area | number }} km<sup>2</sup></p>
                 </dd>
+
                 <dt class="col-sm-3">Capital:</dt>
                 <dd class="col-sm-9">
                     <ul>
-                        <li *ngFor="let capital of country.capital">{{ capital }}</li>
+                        <li *ngFor="let cap of country.capital">{{ cap }}</li>
                     </ul>
                 </dd>
-              
-                <dt class="col-sm-3">Term</dt>
+
+                <dt class="col-sm-3">Languajes:</dt>
                 <dd class="col-sm-9">
-                    <p>Definition for the term.</p>
-                    <p>And some more placeholder definition text.</p>
+                    <ul>
+                        <li *ngFor="let language of country.languages | keyvalue">{{ language.value }}</li>
+                    </ul>
+                </dd>
+
+                <dt class="col-sm-3">Independent country?</dt>
+                <dd class="col-sm-9">
+                    <label>
+                        <input type="checkbox" name="checkbox-checked" [checked]="country.independent" />
+                      </label>
                 </dd>
               
-                <dt class="col-sm-3">Another term</dt>
-                <dd class="col-sm-9">This definition is short, so no extra paragraphs or anything.</dd>
+                <dt class="col-sm-3">Member of United Nations?</dt>
+                <dd class="col-sm-9">
+                    <label>
+                        <input type="checkbox" name="checkbox-checked" [checked]="country.unMember" />
+                      </label>
+                </dd>
+              
+                <dt class="col-sm-3">Timezones:</dt>
+                <dd class="col-sm-9">
+                    <ul>
+                        <li *ngFor="let timezone of country.timezones">{{ timezone }}</li>
+                    </ul>
+                </dd>
               
                 <dt class="col-sm-3 text-truncate">Truncated term is truncated</dt>
                 <dd class="col-sm-9">This can be useful when space is tight. Adds an ellipsis at the end.</dd>
