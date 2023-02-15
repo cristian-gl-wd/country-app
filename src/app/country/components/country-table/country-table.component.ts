@@ -1,6 +1,6 @@
 import { Component, Input } from '@angular/core';
 
-import { Country } from '../../interfaces/country.interface';
+import { CountryByRegion } from '../../interfaces/countryByRegion.interface';
 
 @Component({
   selector: 'app-country-table',
@@ -9,10 +9,6 @@ import { Country } from '../../interfaces/country.interface';
 })
 export class CountryTableComponent {
 
-  @Input() countries: Country[] = [];
-
-  constructor() {
-    console.log(this.countries);
-  }
+  @Input() countries: CountryByRegion[] = [];
 
 }

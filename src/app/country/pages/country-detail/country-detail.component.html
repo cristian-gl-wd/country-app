@@ -12,10 +12,12 @@
                     <h3><small>{{ country.region }}, {{ country.subregion }}</small></h3>
                 </div>
                 <figure class="figure col-2 mb-0">
-                    <img [src]="country.flags.png" class="figure-img img-fluid flag rounded" alt="Flag">
+                    <img [src]="country.flags.png" class="img-fluid flag" alt="Flag">
                     <figcaption class="figure-caption text-center"><i class="bi bi-geo-alt-fill"></i> {{ country.latlng }}</figcaption>
                 </figure>
             </div>
+
+            //TODO: finish country details view
 
             <dl class="row">
                 <dt class="col-sm-3">Area:</dt>

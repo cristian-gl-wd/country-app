@@ -11,8 +11,4 @@ export class CountryListComponent {
   
   @Input() countries: Country[] = [];
 
-  constructor() {
-    //console.log(this.countries);
-  }
-
 }

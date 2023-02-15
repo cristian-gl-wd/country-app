@@ -15,8 +15,9 @@ table > tbody > tr:hover {
 table > tbody > tr > td > img.small-img {
     max-width: 2vw;
     border: 2px solid black;
-    border-radius: 20%;
+    border-radius: 8%;
     transition: all .1s ease;
+    max-height: 26px;
 }
 
 /* LINKS */
